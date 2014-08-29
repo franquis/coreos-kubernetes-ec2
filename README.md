@@ -55,5 +55,5 @@ Your Kubernetes cluster has successfully deployed to AWS CloudFormation.
 Open [Cloudformation](https://console.aws.amazon.com/cloudformation/home) to see the creation status of your Kubernetes Stack
 
 
-### Usefull resources
+### Useful resources
 - [Kubernetes Web Visualizer by Azure](https://github.com/Azure/azure-kubernetes-visualizer).
