@@ -1,0 +1,14 @@
+[
+    {
+        "ParameterKey":     "KeyPair",
+        "ParameterValue":   "MyKey"
+    },
+    {
+        "ParameterKey":     "InstanceType",
+        "ParameterValue":   "m3.medium"
+    },
+    {
+        "ParameterKey":     "DiscoveryURL",
+        "ParameterValue":   ""
+    }
+]
