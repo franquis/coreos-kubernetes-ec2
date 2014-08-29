@@ -39,7 +39,7 @@ $ export AWS_KEY_NAME = 'Kubernetes'
 $ aws ec2 import-key-pair --key-name $AWS_KEY_NAME --public-key-material file://$AWS_PUBLIC_KEY
 ```
 
-## Configure [custom.json](custom.json)
+## Configure [config.json](config.json)
 - Change the "KeyPair" value to "Kubernetes", or to another key you would like to connect with.
 - Browse to https://discovery.etcd.io/new and set the token provided into the "DiscoveryURL" value.
 
