@@ -1,8 +1,14 @@
 CoreOS and Kubernetes on Amazon EC2
 =====================
 
-This how-to guide describe how to set-up a CoreOS cluster running Kubernetes on Amazon EC2.
-**This is currently a work in progress**
+This how-to guide describes how to set-up a CoreOS cluster running Kubernetes on Amazon EC2.
+
+**The *provision-ec2.sh* script will create :**
+- 4 instances (1 *kubernetes-master* & 3 *kubernetes-minion*)
+- 2 security groups (*KubernetesMasterSecurityGroup*,*KubernetesMinionSecurityGroup*)
+
+
+> **This is currently a work in progress, I successfully tested it but use it at your own risks**
 
 ### Notes
 This documentation is based on the [how-to guide provided by kelseyhightowaer] (https://github.com/kelseyhightower/kubernetes-coreos) and the [Deis provisionning documentation] (https://github.com/deis/deis/tree/master/contrib/ec2)
@@ -46,8 +52,8 @@ $ ./provision-ec2.sh
 Your Kubernetes cluster has successfully deployed to AWS CloudFormation.
 ```
 
-Open (Cloudformation)[https://console.aws.amazon.com/cloudformation/home] to see the creation status of your Kubernetes Stack
+Open [Cloudformation](https://console.aws.amazon.com/cloudformation/home) to see the creation status of your Kubernetes Stack
 
 
-### Usefull resources
-- [Kubernetes Web Visualizer by Azure](https://github.com/Azure/azure-kubernetes-visualizer)
+### Useful resources
+- [Kubernetes Web Visualizer by Azure](https://github.com/Azure/azure-kubernetes-visualizer).
