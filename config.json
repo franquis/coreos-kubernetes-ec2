@@ -1,7 +1,7 @@
 [
     {
         "ParameterKey":     "KeyPair",
-        "ParameterValue":   "MyKey"
+        "ParameterValue":   "<changeMe>"
     },
     {
         "ParameterKey":     "InstanceType",
@@ -9,6 +9,6 @@
     },
     {
         "ParameterKey":     "DiscoveryURL",
-        "ParameterValue":   "https://discovery.etcd.io/23cacc8f8f447499e9b9c02b1ede5edf"
+        "ParameterValue":   "<changeMe>"
     }
 ]

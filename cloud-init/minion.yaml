@@ -5,8 +5,8 @@ coreos:
     # generate a new token for each unique cluster from https://discovery.etcd.io/new
     # uncomment the following line and replace it with your discovery URL
     discovery: $DiscoveryURL
-    addr: $private_ip:4001
-    peer-addr: $private_ip:7001
+    addr: $public_ipv4:4001
+    peer-addr: $private_ipv4:7001
     peer-heartbeat-interval: 250
     peer-election-timeout: 1000
   units:
@@ -48,7 +48,7 @@ coreos:
         ExecStart=/opt/bin/kubelet \
         --address=0.0.0.0 \
         --port=10250 \
-        --hostname_override=$private_ip \
+        --hostname_override=$private_ipv4 \
         --etcd_servers=http://127.0.0.1:4001 \
         --logtostderr=true
         Restart=always
@@ -69,7 +69,9 @@ coreos:
         Wants=download-kubernetes.service
 
         [Service]
-        ExecStart=/opt/bin/proxy --etcd_servers=http://127.0.0.1:4001 --logtostderr=true
+        ExecStart=/opt/bin/proxy \
+        --etcd_servers=http://127.0.0.1:4001 \
+        --logtostderr=true
         Restart=always
         RestartSec=10
 

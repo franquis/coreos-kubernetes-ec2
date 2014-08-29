@@ -8,10 +8,14 @@ This how-to guide describes how to set-up a CoreOS cluster running Kubernetes on
 - 2 security groups (*KubernetesMasterSecurityGroup*,*KubernetesMinionSecurityGroup*)
 
 
-> **This is currently a work in progress, I successfully tested it but use it at your own risks**
+> **This is currently a work in progress**
 
 ### Notes
 This documentation is based on the [how-to guide provided by kelseyhightowaer] (https://github.com/kelseyhightower/kubernetes-coreos) and the [Deis provisionning documentation] (https://github.com/deis/deis/tree/master/contrib/ec2)
+
+### Todos
+- Create a VPC with custom subnets and assign privates IP to instances
+- Edit the [*apiserver* config](cloud-init/master.yaml) and set either the `machines` param or a `cloudprovider` param
 
 ## Install the [AWS Command Line Interface](https://github.com/aws/aws-cli):
 ```console

@@ -7,7 +7,8 @@ coreos:
     # generate a new token for each unique cluster from https://discovery.etcd.io/new
     # uncomment the following line and replace it with your discovery URL
     discovery: $DiscoveryURL
-    addr: $private_ipv4:4001
+    addr: $public_ipv4:4001
+    bind-addr: 0.0.0.0
     peer-addr: $private_ipv4:7001
     peer-heartbeat-interval: 250
     peer-election-timeout: 1000
@@ -59,6 +60,9 @@ coreos:
         --address=127.0.0.1 \
         --port=8080 \
         --etcd_servers=http://127.0.0.1:4001 \
+        #--machines=
+        #--minion_regexp=
+        #--cloudprovider=
         --logtostderr=true
         Restart=always
         RestartSec=10
@@ -102,7 +106,7 @@ coreos:
         ExecStart=/opt/bin/kubelet \
         --address=0.0.0.0 \
         --port=10250 \
-        #--hostname_override=192.168.12.10 \
+        --hostname_override=$private_ipv4 \
         --etcd_servers=http://127.0.0.1:4001 \
         --logtostderr=true
         Restart=always
