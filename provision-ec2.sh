@@ -30,6 +30,6 @@ fi
 aws cloudformation create-stack \
     --template-body "$(./gen-json.py)" \
     --stack-name kubernetes \
-    --parameters "$(<custom.json)"
+    --parameters "$(<config.json)"
 
 echo_green "Your Kubernetes cluster has successfully deployed to AWS CloudFormation."
