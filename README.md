@@ -1,5 +1,9 @@
+__Note (04/08/2015) This guide has been superseeded by the tutorial provided by  [@GoogleCloudPlatform](https://github.com/GoogleCloudPlatform/kubernetes/blob/master/docs/getting-started-guides/aws-coreos.md)__
+
 CoreOS and Kubernetes on Amazon EC2
 =====================
+
+
 
 This how-to guide describes how to set-up a CoreOS cluster running Kubernetes on Amazon EC2.
 
